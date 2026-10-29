@@ -1,0 +1,38 @@
+name: Weekly jobs run
+
+on:
+  schedule:
+    - cron: "30 6 * * 1"      # every Monday 06:30 UTC (07:30 UK in summer, 06:30 in winter)
+  workflow_dispatch:           # also lets anyone with repo access run it by hand
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install requests openpyxl
+
+      - name: Fetch, filter and build the page
+        env:
+          REED_API_KEY: ${{ secrets.REED_API_KEY }}
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+        run: |
+          python run.py
+          python build_page.py
+
+      - name: Save results back to the repository
+        run: |
+          git config user.name "wyk-jobs-bot"
+          git config user.email "jobs-bot@users.noreply.github.com"
+          git add jobs.json state.json vacancies.html review-*.xlsx
+          git commit -m "Weekly jobs run $(date -u +%F)" || echo "nothing new"
+          git push
