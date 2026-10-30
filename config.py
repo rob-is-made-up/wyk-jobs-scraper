@@ -14,6 +14,19 @@ EXCLUDE_TERMS = [
     "executive assistant", "pa to", "personal assistant", "sales executive", "business development",
     "software", "engineer", "developer", "finance", "accounts payable", "payroll", "legal",
     "it support", "receptionist",
+    # sales and non-marketing roles that borrow marketing words
+    "sales", "new business", "saas", "b2b", "fintech", "trading", "certification", "procurement",
+    # contract types the sheet doesn't cover
+    "freelance", "temporary", "temp ", "interim", "part time", "part-time", "fixed term",
+    # paid training courses pretending to be jobs
+    "training course", "no experience required",
+    # overseas offices picked up from agency careers pages
+    "cape town", "argentina", "south africa", "india", "dubai", "singapore", "new york", "sydney",
+]
+
+# Companies whose adverts are paid training courses or recruiters we don't want.
+EXCLUDE_EMPLOYERS = [
+    "netcom", "itol", "qualify nation", "it career switch", "learning people", "e-careers", "growth for good",
 ]
 
 # Title should relate to digital marketing / media / creative work.
