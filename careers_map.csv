@@ -2,7 +2,7 @@ company,website,group,careers_url,ats,token,status,manual,notes
 "WPP Media (EssenceMediacom, Mindshare, Wavemaker, OpenDoor…)",,(group feed),,greenhouse,wppmedia,group feed,,
 "Dentsu (Carat, iProspect, Merkle, dentsu X, Dentsu B2B…)",,(group feed),,workday,dentsuaegis|wd3|DAN_GLOBAL,group feed,,
 "Havas (Havas Media Network, Havas London…)",,(group feed),,workday_site,havas|wd3|GroupExternalCareerSite,group feed,,
-"Publicis Groupe (Starcom, Zenith, Spark Foundry, Digitas, Leo, Saatchi, BBH…)",,(group feed),,icims,careers-publicisgroupe,group feed,,
+"Publicis Groupe (Starcom, Zenith, Spark Foundry, Digitas, Leo, Saatchi, BBH…)",,(group feed),,jibe,https://careers.publicisgroupe.com,group feed,y,Jibe careers site; /api/jobs JSON
 "Omnicom (OMD, PHD, Hearts & Science, adam&eveDDB, AMV BBDO, McCann, UM, Initiative…)",,(group feed),,verify,,group feed,,
 Monks (S4 Capital),,(group feed),,verify,,group feed,,
 Accenture Song (Droga5…),,(group feed),,verify,,group feed,,
