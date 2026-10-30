@@ -277,3 +277,31 @@ def adzuna(app_id, app_key, where="London", max_days=14):
                             (j.get("location") or {}).get("display_name"), j.get("redirect_url"),
                             j.get("created"), sal, _strip(j.get("description"))))
     return out
+
+
+# ---------- Jibe / iCIMS careers sites (e.g. careers.publicisgroupe.com) ----------
+
+def jibe(base, company):
+    """base = site root. Pulls every job within 15 miles of London; the title filter does the rest."""
+    base = base.rstrip("/")
+    params = ("location=London%2C%20Greater%20London%2C%20United%20Kingdom&woe=7&regionCode=GB"
+              "&stretchUnit=MILES&stretch=15&limit=100")
+    out, page = [], 1
+    while page <= 10:
+        d = _get(f"{base}/api/jobs?{params}&page={page}", headers={"Accept": "application/json"}).json()
+        jobs = d.get("jobs", [])
+        for x in jobs:
+            j = x.get("data", {})
+            brand = "/".join(j.get("tags2") or []) or j.get("hiring_organization") or company
+            level = "/".join(j.get("tags5") or [])
+            out.append(_job("jibe", f"{company} - {brand}" if brand != company else company,
+                            j.get("req_id") or j.get("slug"), j.get("title"), j.get("city") or j.get("location_name"),
+                            f"{base}/jobs/{j.get('slug')}?lang=en-us", j.get("posted_date"),
+                            snippet=(f"Experience level: {level}. " if level else "") + _strip(j.get("description"), 220)))
+        if len(jobs) < 100 or page * 100 >= d.get("totalCount", 0):
+            break
+        page += 1
+    return out
+
+
+FETCHERS["jibe"] = jibe
