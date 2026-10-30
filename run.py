@@ -18,7 +18,7 @@ import traceback
 import openpyxl
 
 import sources
-from config import ENTRY_TERMS, EXCLUDE_TERMS, FIELD_TERMS, LONDON_TERMS, UK_TERMS
+from config import ENTRY_TERMS, EXCLUDE_TERMS, EXCLUDE_EMPLOYERS, FIELD_TERMS, LONDON_TERMS, UK_TERMS
 
 STATE_FILE = "state.json"
 OVERRIDES_FILE = "overrides.csv"      # team edits: id, hide (y), pin (y), note
@@ -49,6 +49,12 @@ def keep(job):
     t = job["title"].lower()
     if not t or _has(t, EXCLUDE_TERMS):
         return False
+    if any(e in (job.get("company") or "").lower() for e in EXCLUDE_EMPLOYERS):
+        return False
+    if job["source"] == "careers-page":
+        # link text scraped from an agency's own page: drop anything that isn't a plain job title
+        if len(t) > 70 or re.search(r"\d|\bjobs\b|view role|news|read more|apply now|learn more", t):
+            return False
     if not _has(t, ENTRY_TERMS):
         return False
     return _has(t, FIELD_TERMS)
