@@ -45,10 +45,10 @@ def _strip(h, n=280):
     return (t[: n - 1] + "…") if len(t) > n else t
 
 
-def _job(source, company, jid, title, location, url, posted=None, salary=None, snippet=""):
+def _job(source, company, jid, title, location, url, posted=None, salary=None, snippet="", salary_min=None):
     return {"id": f"{source}:{jid}", "title": (title or "").strip(), "company": company,
             "location": (location or "").strip(), "url": url, "posted": _date(posted),
-            "source": source, "salary": salary, "snippet": snippet}
+            "source": source, "salary": salary, "salary_min": salary_min, "snippet": snippet}
 
 
 # ---------- hiring systems ----------
@@ -229,6 +229,15 @@ FETCHERS = {
 }
 
 
+def _annual(v):
+    """Starting salary as an annual figure; hourly/daily rates (small numbers) are left out."""
+    try:
+        v = float(v)
+    except (TypeError, ValueError):
+        return None
+    return int(v) if v >= 5000 else None
+
+
 # ---------- job boards ----------
 
 REED_QUERIES = ["digital marketing assistant", "digital marketing executive", "social media executive",
@@ -255,7 +264,8 @@ def reed(api_key, location="London", distance=25, max_days=14):
             if j.get("minimumSalary"):
                 sal = f"£{int(j['minimumSalary']):,}" + (f"–£{int(j['maximumSalary']):,}" if j.get("maximumSalary") and j["maximumSalary"] != j["minimumSalary"] else "")
             out.append(_job("reed", j.get("employerName"), j["jobId"], j.get("jobTitle"), j.get("locationName"),
-                            j.get("jobUrl"), posted, sal, _strip(j.get("jobDescription"))))
+                            j.get("jobUrl"), posted, sal, _strip(j.get("jobDescription")),
+                            salary_min=_annual(j.get("minimumSalary"))))
     return out
 
 
@@ -275,7 +285,8 @@ def adzuna(app_id, app_key, where="London", max_days=14):
                 sal = f"£{int(j['salary_min']):,}" + (f"–£{int(j['salary_max']):,}" if j.get("salary_max") and j["salary_max"] != j["salary_min"] else "")
             out.append(_job("adzuna", (j.get("company") or {}).get("display_name"), j["id"], j.get("title"),
                             (j.get("location") or {}).get("display_name"), j.get("redirect_url"),
-                            j.get("created"), sal, _strip(j.get("description"))))
+                            j.get("created"), sal, _strip(j.get("description")),
+                            salary_min=None if j.get("salary_is_predicted") == "1" else _annual(j.get("salary_min"))))
     return out
 
 
