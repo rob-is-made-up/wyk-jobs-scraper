@@ -24,6 +24,29 @@ EXCLUDE_TERMS = [
     "cape town", "argentina", "south africa", "india", "dubai", "singapore", "new york", "sydney",
 ]
 
+# Roles whose advertised starting salary is at or above this are not entry level, whatever the title says.
+MAX_STARTING_SALARY = 37000
+
+# Page filters. A job gets every category whose title words appear in its title. If the title matches
+# nothing, the description is checked against the shorter, more specific list only.
+CATEGORIES = [
+    # (name, words matched in the title, words matched in the description)
+    ("Paid social", ["paid social", "social ads", "meta ads", "facebook ads", "tiktok", "snapchat", "pinterest ads", "social media buyer", "social buying", "social advertising", "paid media"],
+                    ["paid social", "meta ads", "tiktok ads", "facebook ads", "social advertising"]),
+    ("Retail media", ["retail media", "amazon ads", "amazon marketplace", "amazon advertising", "marketplace", "commerce media", "e-commerce", "ecommerce"],
+                     ["retail media", "amazon ads", "amazon advertising", "commerce media"]),
+    ("Paid search / PPC", ["paid search", "ppc", "google ads", "adwords", "sem", "search marketing", "shopping ads", "biddable", "performance marketing", "performance media", "paid media"],
+                          ["paid search", "ppc", "google ads", "adwords"]),
+    ("Programmatic / ad ops", ["programmatic", "display", "ad ops", "adops", "ad operations", "trading", "trader", "dsp", "dv360", "digital operations"],
+                              ["programmatic", "ad ops", "ad operations", "dv360", "display advertising"]),
+    ("Client services", ["account executive", "account exec", "account manager", "account coordinator", "client executive", "client services", "client service", "client leadership", "client development", "client management", "account management", "account handling"],
+                        ["client services", "client leadership", "account management"]),
+    ("Planning / strategy", ["planning", "planner", "strategy", "strategist", "comms planning", "media analyst", "media planner", "investment", "analyst (media)"],
+                            ["media planning", "comms planning", "communications planning", "media strategy"]),
+    ("OOH / TV / AV / print", ["ooh", "out of home", "out-of-home", "tv", "av", "audio visual", "audio-visual", "broadcast", "radio", "audio", "print", "publishing", "cinema"],
+                              ["out of home", "out-of-home", "broadcast", "tv campaigns"]),
+]
+
 # Companies whose adverts are paid training courses or recruiters we don't want.
 EXCLUDE_EMPLOYERS = [
     "netcom", "itol", "qualify nation", "it career switch", "learning people", "e-careers", "growth for good",
