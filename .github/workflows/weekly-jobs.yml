@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: weekly-jobs
+  cancel-in-progress: false
+
 jobs:
   run:
     runs-on: ubuntu-latest
@@ -35,4 +39,5 @@ jobs:
           git config user.email "jobs-bot@users.noreply.github.com"
           git add jobs.json state.json vacancies.html review-*.xlsx
           git commit -m "Weekly jobs run $(date -u +%F)" || echo "nothing new"
+          git pull --rebase origin main
           git push
