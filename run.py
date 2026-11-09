@@ -18,7 +18,8 @@ import traceback
 import openpyxl
 
 import sources
-from config import ENTRY_TERMS, EXCLUDE_TERMS, EXCLUDE_EMPLOYERS, FIELD_TERMS, LONDON_TERMS, UK_TERMS
+from config import (ENTRY_TERMS, EXCLUDE_TERMS, EXCLUDE_EMPLOYERS, FIELD_TERMS, LONDON_TERMS, UK_TERMS,
+                    MAX_STARTING_SALARY, CATEGORIES)
 
 STATE_FILE = "state.json"
 OVERRIDES_FILE = "overrides.csv"      # team edits: id, hide (y), pin (y), note
@@ -55,9 +56,24 @@ def keep(job):
         # link text scraped from an agency's own page: drop anything that isn't a plain job title
         if len(t) > 70 or re.search(r"\d|\bjobs\b|view role|news|read more|apply now|learn more", t):
             return False
+    if job.get("salary_min") and job["salary_min"] >= MAX_STARTING_SALARY:
+        return False  # not entry level at that starting salary, whatever the title says
     if not _has(t, ENTRY_TERMS):
         return False
     return _has(t, FIELD_TERMS)
+
+
+def categories(job):
+    """Filter tags for the page: match on the title first, then the description."""
+    # "social media executive" is a social role, not a media-planning one
+    t = job["title"].lower().replace("social media", "social")
+    cats = [name for name, words, _ in CATEGORIES if _has(t, words)]
+    if not cats and _has(t, ["media executive", "media assistant"]):
+        cats = ["Planning / strategy"]  # generic agency media roles sit with the planners
+    if not cats and job.get("snippet"):
+        d = job["snippet"].lower()
+        cats = [name for name, _, strict in CATEGORIES if _has(d, strict)]
+    return cats
 
 
 def region(job, default_london=False):
@@ -145,11 +161,11 @@ def write_review(jobs, closed, log):
     wb = openpyxl.Workbook()
     ws = wb.active; ws.title = "This week"
     ws.append(["id", "New?", "Region", "Title", "Employer", "Location", "Salary", "Posted", "First seen",
-               "Source", "Link", "hide (y)", "pin (y)", "WYK note"])
+               "Source", "Categories", "Link", "hide (y)", "pin (y)", "WYK note"])
     for j in sorted(jobs, key=lambda x: (x["region"], x["first_seen"]), reverse=True):
         ws.append([j["id"], "NEW" if j["new"] else "", "London & around" if j["region"] == "L" else "Rest of UK",
                    j["title"], j["company"], j["location"], j.get("salary") or "", j.get("posted") or "",
-                   j["first_seen"], j["source"], j["url"], "", "", ""])
+                   j["first_seen"], j["source"], ", ".join(j.get("categories") or []), j["url"], "", "", ""])
     ws2 = wb.create_sheet("Closed since last run")
     ws2.append(["Title", "Employer", "Link", "First seen"])
     for j in closed:
@@ -174,6 +190,7 @@ def main():
         if not reg:
             continue
         j["region"] = reg
+        j["categories"] = categories(j)
         kept.append(j)
     kept = dedupe(kept)
     closed = update_state(kept)
