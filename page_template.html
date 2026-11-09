@@ -69,6 +69,18 @@
   .stat .n { font-size: 1.3rem; font-weight: 800; }
   .stat .l { font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); }
 
+  .filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1.6rem; }
+  .filters .f {
+    font: inherit; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.02em;
+    color: var(--ink); background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 999px;
+    padding: 0.35rem 0.7rem; cursor: pointer;
+  }
+  .filters .f b { font-weight: 500; color: var(--ink-muted); margin-left: 0.2rem; }
+  .filters .f:hover { border-color: var(--ink); }
+  .filters .f.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .filters .f.on b { color: var(--paper); opacity: 0.75; }
+  .filters .f:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tag { display: inline-block; font-size: 0.68rem; font-weight: 600; color: var(--ink-muted); border: 1px solid var(--rule); border-radius: 999px; padding: 0.05rem 0.45rem; margin-left: 0.25rem; }
   .region { margin-bottom: 2.25rem; }
   .region-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; border-bottom: 2px solid var(--ink); padding-bottom: 0.35rem; }
   .region-head h2 { margin: 0; font-size: 1.35rem; text-transform: uppercase; }
@@ -152,7 +164,7 @@
   
 
   <footer>
-    <span>Sources: employer careers pages · Reed · Adzuna · WYK team picks. Paid "trainee" course adverts excluded.</span>
+    <span>Sources: employer careers pages · Reed · Adzuna. Checked automatically; paid "trainee" course adverts excluded.</span>
     <span class="mono">Checked automatically each week</span>
   </footer>
 </div>
