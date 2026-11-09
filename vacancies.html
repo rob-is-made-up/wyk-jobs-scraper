@@ -69,6 +69,18 @@
   .stat .n { font-size: 1.3rem; font-weight: 800; }
   .stat .l { font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-muted); }
 
+  .filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1.6rem; }
+  .filters .f {
+    font: inherit; font-size: 0.74rem; font-weight: 600; letter-spacing: 0.02em;
+    color: var(--ink); background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 999px;
+    padding: 0.35rem 0.7rem; cursor: pointer;
+  }
+  .filters .f b { font-weight: 500; color: var(--ink-muted); margin-left: 0.2rem; }
+  .filters .f:hover { border-color: var(--ink); }
+  .filters .f.on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .filters .f.on b { color: var(--paper); opacity: 0.75; }
+  .filters .f:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .tag { display: inline-block; font-size: 0.68rem; font-weight: 600; color: var(--ink-muted); border: 1px solid var(--rule); border-radius: 999px; padding: 0.05rem 0.45rem; margin-left: 0.25rem; }
   .region { margin-bottom: 2.25rem; }
   .region-head { display: flex; justify-content: space-between; align-items: baseline; gap: 0.75rem; border-bottom: 2px solid var(--ink); padding-bottom: 0.35rem; }
   .region-head h2 { margin: 0; font-size: 1.35rem; text-transform: uppercase; }
@@ -133,7 +145,7 @@
     <div class="masthead-text">
       <div class="kicker">
         <span>Vacancy Sheet — UK Edition</span>
-        <span class="mono">Updated 2 Nov 2026</span>
+        <span class="mono">Updated 9 Nov 2026</span>
       </div>
       <h1 class="display">Entry-Level <span class="accent-word">Digital Marketing</span> Jobs</h1>
     </div>
@@ -141,26 +153,123 @@
   </header>
 
   <div class="stat-row">
-    <div class="stat"><span class="n mono">117</span><span class="l">Live vacancies</span></div>
-    <div class="stat"><span class="n mono">115</span><span class="l">London &amp; around</span></div>
-    <div class="stat"><span class="n mono">117</span><span class="l">New this week</span></div>
-    <div class="stat"><span class="n mono">26</span><span class="l">Closed since last run</span></div>
+    <div class="stat"><span class="n mono">40</span><span class="l">Live vacancies</span></div>
+    <div class="stat"><span class="n mono">38</span><span class="l">London &amp; around</span></div>
+    <div class="stat"><span class="n mono">14</span><span class="l">New this week</span></div>
+    <div class="stat"><span class="n mono">90</span><span class="l">Closed since last run</span></div>
   </div>
 
+<nav class="filters" aria-label="Filter by specialism"><button class="f on" data-f="">All <b>40</b></button><button class="f" data-f="Paid social">Paid social <b>2</b></button><button class="f" data-f="Retail media">Retail media <b>2</b></button><button class="f" data-f="Paid search / PPC">Paid search / PPC <b>4</b></button><button class="f" data-f="Programmatic / ad ops">Programmatic / ad ops <b>1</b></button><button class="f" data-f="Client services">Client services <b>9</b></button><button class="f" data-f="Planning / strategy">Planning / strategy <b>3</b></button><button class="f" data-f="OOH / TV / AV / print">OOH / TV / AV / print <b>1</b></button><button class="f" data-f="Other">Other <b>23</b></button></nav>
   <section class="region">
-    <div class="region-head"><h2 class="display">London &amp; Surrounding Areas</h2><span class="mono count">115 roles</span></div>
+    <div class="region-head"><h2 class="display">London &amp; Surrounding Areas</h2><span class="mono count">38 roles</span></div>
     <p class="region-note">Greater London plus commutable Home Counties. WYK picks first, then newest.</p>
 
     <div class="listings">
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Jibe</span></div>
-        <h2><a href="https://careers.publicisgroupe.com/jobs/180428?lang=en-us" target="_blank" rel="noopener">Account Executive</a></h2>
-        <div class="meta"><span><strong>Publicis Groupe - Leo Burnett</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 2 Nov</div>
-        <p class="snippet">Experience level: Entry. Company description As Leo Burnett himself once said: “At the end of the day, we’re just people talking to people.” And that sums up how we think. We never forget that on the other side of every screen, watching every a…</p>
-        <a class="apply" href="https://careers.publicisgroupe.com/jobs/180428?lang=en-us" target="_blank" rel="noopener">View &amp; apply →</a>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Careers site</span></div>
+        <h2><a href="https://job-boards.greenhouse.io/wppmedia/jobs/5472733008" target="_blank" rel="noopener">Associate, Search, GCS</a></h2>
+        <div class="meta"><span><strong>WPP Media</strong></span><span class="sep">·</span><span>London, United Kingdom</span></div>
+        <div class="closing ok">Posted 9 Nov</div>
+        
+        <a class="apply" href="https://job-boards.greenhouse.io/wppmedia/jobs/5472733008" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+        <h2><a href="https://www.reed.co.uk/jobs/marketing-assistant/57538542" target="_blank" rel="noopener">Marketing Assistant</a></h2>
+        <div class="meta"><span><strong>Strictly Recruitment</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£28,000–£30,000</span></div>
+        <div class="closing ok">Posted 6 Nov</div>
+        <p class="snippet">Marketing Assistant - Blackfriars, London | Circa 30,000 Are you looking to kick-start your career in Business Development and Marketing within a professional services environment? This is an exciting opportunity to join a highly regarded firm and gain exposure across a broad ra…</p>
+        <a class="apply" href="https://www.reed.co.uk/jobs/marketing-assistant/57538542" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+        <h2><a href="https://www.reed.co.uk/jobs/ea-marketing-assistant/57538081" target="_blank" rel="noopener">EA &amp; Marketing Assistant</a></h2>
+        <div class="meta"><span><strong>Office Angels</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£32,000</span></div>
+        <div class="closing ok">Posted 6 Nov</div>
+        <p class="snippet">Job Title: EA &amp; Marketing Assistant Location: Southwest London Remuneration: 32,000 p/a + annual discretionary bonus Contract Details: Permanent, Full Time (09:00am - 5:30pm) Responsibilities: Our client is seeking an enthusiastic and detail-oriented EA &amp; Marketing Assistant to …</p>
+        <a class="apply" href="https://www.reed.co.uk/jobs/ea-marketing-assistant/57538081" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+        <h2><a href="https://www.reed.co.uk/jobs/graduate-marketing-executive-opportunity/57535845" target="_blank" rel="noopener">Graduate Marketing Executive Opportunity</a></h2>
+        <div class="meta"><span><strong>Office Angels</strong></span><span class="sep">·</span><span>Guildford</span><span class="sep">·</span><span class="mono">£28,000–£35,000</span></div>
+        <div class="closing ok">Posted 5 Nov</div>
+        <p class="snippet">Graduate Opportunity for a Marketing Executive Based: This is a full-time, permanent position based in Godalming. Salary 28,000- 35,000 DOE Office Based Our client who has a strong reputation for delivering award-winning customer service. Is looking for a confident, enthusiastic…</p>
+        <a class="apply" href="https://www.reed.co.uk/jobs/graduate-marketing-executive-opportunity/57535845" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+        <h2><a href="https://www.reed.co.uk/jobs/marketing-executive-professional-services/57532426" target="_blank" rel="noopener">Marketing Executive - Professional Services</a></h2>
+        <div class="meta"><span><strong>Michael Page Marketing</strong></span><span class="sep">·</span><span>Watford</span><span class="sep">·</span><span class="mono">£35,000–£45,000</span></div>
+        <div class="closing ok">Posted 5 Nov</div>
+        <p class="snippet">As a Marketing Executive - Professional Services, you will manage day-to-day marketing activity for a growing firm, helping to keep campaigns and communications organised. You will work closely with the wider team to deliver clear, consistent marketing that supports the wider bu…</p>
+        <a class="apply" href="https://www.reed.co.uk/jobs/marketing-executive-professional-services/57532426" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+        <h2><a href="https://www.reed.co.uk/jobs/graduate-client-success-creative-executive/57536124" target="_blank" rel="noopener">Graduate Client Success &amp; Creative Executive</a></h2>
+        <div class="meta"><span><strong>Bluetown</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£27,000–£30,000</span></div>
+        <div class="closing ok">Posted 5 Nov</div>
+        <p class="snippet">Job Title: Graduate Client Success &amp; Creative Executive Location: Stratford, London Salary: 27,000 - 30,000 per annum (dependent on experience) Duration: Full Time, Permanent About Us At Bluetown, we provide innovative recruitment advertising solutions and ATS software to help U…</p>
+        <a class="apply" href="https://www.reed.co.uk/jobs/graduate-client-success-creative-executive/57536124" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Careers site</span></div>
+        <h2><a href="https://careers.publicisgroupe.com/jobs/179413?lang=en-us" target="_blank" rel="noopener">Junior Data Analyst (Social Data &amp; Automation)</a></h2>
+        <div class="meta"><span><strong>Publicis Groupe - PGOne</strong></span><span class="sep">·</span><span>London</span></div>
+        <div class="closing ok">Posted 4 Nov</div>
+        <p class="snippet">Experience level: Entry. Company description We are PG ONE. We are the ideas, production and media for over 30 of the world’s most known and loved brands from the world’s biggest advertiser, P&amp;G (Procter &amp; Gamble). When you see Pampers, Gillett…</p>
+        <a class="apply" href="https://careers.publicisgroupe.com/jobs/179413?lang=en-us" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+        <h2><a href="https://www.reed.co.uk/jobs/content-assistant/57528065" target="_blank" rel="noopener">Content Assistant</a></h2>
+        <div class="meta"><span><strong>Ashdown Group</strong></span><span class="sep">·</span><span>Hayes</span><span class="sep">·</span><span class="mono">£25,000–£35,000</span></div>
+        <div class="closing ok">Posted 4 Nov</div>
+        <p class="snippet">We are seeking a dedicated Content Assistant to join a leading global manufacturing company that has been operating for more than 30 years, to work from the West London office (work from home on Fridays). This role offers an excellent opportunity to work within a dynamic, consum…</p>
+        <a class="apply" href="https://www.reed.co.uk/jobs/content-assistant/57528065" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+        <h2><a href="https://www.reed.co.uk/jobs/marketing-assistant-elliott-james/57527845" target="_blank" rel="noopener">Marketing Assistant - Elliott James</a></h2>
+        <div class="meta"><span><strong>eFinancialCareers</strong></span><span class="sep">·</span><span>London</span></div>
+        <div class="closing ok">Posted 4 Nov</div>
+        <p class="snippet">Marketing Executive – Asset Management / Financial Services An exciting opportunity has arisen for a Marketing Executive to join a well-established and growing financial services business specialising in the distribution and marketing of investment products for leading asset man…</p>
+        <a class="apply" href="https://www.reed.co.uk/jobs/marketing-assistant-elliott-james/57527845" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Client services">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+        <h2><a href="https://www.reed.co.uk/jobs/commercial-account-executive/57531408" target="_blank" rel="noopener">Commercial Account Executive</a></h2>
+        <div class="meta"><span><strong>Australasian Recruitment Company</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£35,000–£40,000</span></div>
+        <div class="closing ok">Posted 4 Nov · <span class="tag">Client services</span></div>
+        <p class="snippet">COMMERCIAL ACCOUNT EXECUTIVE Build a rewarding career within a rapidly growing FMCG business as a Commercial Account Executive, paying 35,000 - 40,000 per annum, supporting both the Export Director and UK Sales Director across a broad range of commercial activities. From account…</p>
+        <a class="apply" href="https://www.reed.co.uk/jobs/commercial-account-executive/57531408" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Planning / strategy">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Careers site</span></div>
+        <h2><a href="https://careers.publicisgroupe.com/jobs/173403?lang=en-us" target="_blank" rel="noopener">Financial Planning and Analysis Analyst</a></h2>
+        <div class="meta"><span><strong>Publicis Groupe - Epsilon</strong></span><span class="sep">·</span><span>London</span></div>
+        <div class="closing ok">Posted 3 Nov · <span class="tag">Planning / strategy</span></div>
+        <p class="snippet">Experience level: Intermediate. Overview See how Epsilon powers connected marketing by unlocking the full potential of data and identity. How You’ll Make an Impact Epsilon is seeking a highly analytical and commercially minded FP&amp;A Analyst to join our…</p>
+        <a class="apply" href="https://careers.publicisgroupe.com/jobs/173403?lang=en-us" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Paid search / PPC">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+        <h2><a href="https://www.reed.co.uk/jobs/performance-marketing-executive/57520047" target="_blank" rel="noopener">Performance Marketing Executive</a></h2>
+        <div class="meta"><span><strong>Handle Recruitment</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£30,000–£35,000</span></div>
+        <div class="closing ok">Posted 3 Nov · <span class="tag">Paid search / PPC</span></div>
+        <p class="snippet">Handle Recruitment is looking for a proactive, commercially-minded Performance Marketing Executive to join our client&#x27;s growing sports business. Hybrid | Central London | 3 days in office 30,000- 36,000 depending on experience The Client Our client is a global sports business, c…</p>
+        <a class="apply" href="https://www.reed.co.uk/jobs/performance-marketing-executive/57520047" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Retail media">
+        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+        <h2><a href="https://www.reed.co.uk/jobs/ecommerce-concessions-assistant/57517270" target="_blank" rel="noopener">Ecommerce Concessions Assistant</a></h2>
+        <div class="meta"><span><strong>Adecco </strong></span><span class="sep">·</span><span>Kingston Upon Thames</span><span class="sep">·</span><span class="mono">£15</span></div>
+        <div class="closing ok">Posted 2 Nov · <span class="tag">Retail media</span></div>
+        <p class="snippet">Ecommerce Concessions Assistant Location: Kingston Pay rate: 15.38 Hours: Monday - Friday 9:00am-5:30pm Temporary contract Role Overview We are seeking a detail-oriented and highly organised Ecommerce Concessions Assistant to support the day-to-day management of our client&#x27;s onl…</p>
+        <a class="apply" href="https://www.reed.co.uk/jobs/ecommerce-concessions-assistant/57517270" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Other">
         <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
         <h2><a href="https://www.reed.co.uk/jobs/marketing-executive/57514695" target="_blank" rel="noopener">Marketing Executive</a></h2>
         <div class="meta"><span><strong>Information Security Forum Limited</strong></span><span class="sep">·</span><span>London</span></div>
@@ -168,904 +277,192 @@
         <p class="snippet">Job Title: Marketing Executive Location: London Salary: Competitive salary and discretionary annual bonus Job Type: Permanent, Full time About the Information Security Forum: The Information Security Forum (ISF) is an independent, not-for-profit organisation supported by a Membe…</p>
         <a class="apply" href="https://www.reed.co.uk/jobs/marketing-executive/57514695" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
-        <h2><a href="https://www.reed.co.uk/jobs/account-executive/57513483" target="_blank" rel="noopener">Account Executive</a></h2>
-        <div class="meta"><span><strong>Australasian Recruitment Company</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£45,000–£50,000</span></div>
-        <div class="closing ok">Posted 2 Nov</div>
-        <p class="snippet">ACCOUNT EXECUTIVE Our client is a rapidly growing technology business that partners with a range of commercial organisations to help streamline operational processes, improve efficiency and support business growth. Following continued expansion, they are looking to hire an ambit…</p>
-        <a class="apply" href="https://www.reed.co.uk/jobs/account-executive/57513483" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5950768362?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Social Media and Marketing Executive</a></h2>
-        <div class="meta"><span><strong>Pillarangel Limited</strong></span><span class="sep">·</span><span>London, UK</span><span class="sep">·</span><span class="mono">£30,000–£35,000</span></div>
-        <div class="closing ok">Posted 2 Nov</div>
-        <p class="snippet">Social Media &amp; Marketing Executive D3 Collective | London Location: London Department: Marketing Reporting to: Group Head of Marketing About D3 Collective Founded by Des Gunewardena, D3 Collective is a hospitality group developing distinctive restaurant and bar concepts. Its por…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5950768362?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5949999329?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing Assistant, Warner Records Label Group (6 month Temp)</a></h2>
-        <div class="meta"><span><strong>Warner Music Group</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 2 Nov</div>
-        <p class="snippet">At Warner Music Group, we&#x27;re a global collective of music makers and music lovers, tech innovators and inspired entrepreneurs, game-changing creatives and passionate team members. Here, we turn dreams into stardom and audiences into fans. We are guided by three core values that …</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5949999329?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5948635257?se=DkRle9rW8RG74q0YsdnZrA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=849D6B582D4D5145B0CA3D817AE69D3D85E66BEE" target="_blank" rel="noopener">Digital Marketing Executive</a></h2>
-        <div class="meta"><span><strong>Anthem Consulting</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 1 Nov</div>
-        <p class="snippet">A leading London law firm specialising in medical negligence and personal injury is seeking a proactive and creative Digital Marketing Executive to support and enhance its digital marketing activity across the firm. Working closely with the Head of Digital Marketing, you will su…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5948635257?se=DkRle9rW8RG74q0YsdnZrA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=849D6B582D4D5145B0CA3D817AE69D3D85E66BEE" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5948367569?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Social Media and Content Assistant</a></h2>
-        <div class="meta"><span><strong>Hollywood Bowl Group</strong></span><span class="sep">·</span><span>Hemel Hempstead, Hertfordshire</span></div>
-        <div class="closing ok">Posted 1 Nov</div>
-        <p class="snippet">About the role Are you always the first person to send a TikTok trend to your friends? Do you love creating content and bringing brands to life on social media? Are you looking to join a financially stable business with exciting expansion plans? If so, then look no further! The …</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5948367569?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5949011096?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Social Media and Content Assistant - Hemel Hempstead</a></h2>
-        <div class="meta"><span><strong>Hollywood Bowl Group</strong></span><span class="sep">·</span><span>Hemel Hempstead, Hertfordshire</span><span class="sep">·</span><span class="mono">£29,000</span></div>
-        <div class="closing ok">Posted 1 Nov</div>
-        <p class="snippet">Social Media and Content Assistant - Hemel Hempstead Are you always the first person to send a TikTok trend to your friends? Do you love creating content and bringing brands to life on social media? Are you looking to join a financially stable business with exciting expansion pl…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5949011096?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5948885675?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Coordinator, Celebrity Relations &amp; Brand Advocacy</a></h2>
-        <div class="meta"><span><strong>Mandarin Oriental Hotel Group</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 1 Nov</div>
-        <p class="snippet">Mandarin Oriental Hotel Group is looking for a Coordinator, Celebrity Relations &amp; Brand Advocacy to join our Brand team. Are you a master of craft? Do you thrive in a team that succeeds together, demonstrating integrity and respect while acting responsibly? Do you embrace a grow…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5948885675?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5948412842?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Account Executive - Brand Impact</a></h2>
-        <div class="meta"><span><strong>FleishmanHillard</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 1 Nov</div>
-        <p class="snippet">Hybrid London, London, United Kingdom Full time R16053 Agency: FleishmanHillard Job Function: Communications and PR Job Subfunction: Public Relations Job Description: Why FleishmanHillard? We have been named PRWeek&#x27;s Global Agency of the Year and Best Places to Work; a &quot;Standout…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5948412842?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5948864319?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing &amp; Communications Assistant</a></h2>
-        <div class="meta"><span><strong>Mulberry</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 1 Nov</div>
-        <p class="snippet">Born in 1971, the roots of Mulberry are in Somerset, England. For more than fifty years, Mulberry has been a British lifestyle brand, internationally acclaimed for quality and design capturing the Mulberry Spirit. Sustainability has been part of the Mulberry ethos since the bran…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5948864319?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5948635165?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing and BD Assistant</a></h2>
-        <div class="meta"><span><strong>Anthem Consulting</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 1 Nov</div>
-        <p class="snippet">A London law firm, who are specialists in Private Wealth, and have some fantastic historic clients that they have worked since they were founded are seeking a BD Assistant to join them. This is an extremely versatile role, and you will be involved in a wide range of projects, in…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5948635165?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5949018683?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">AI &amp; Digital Marketing Apprentice - Hemel Hempstead</a></h2>
-        <div class="meta"><span><strong>Hollywood Bowl Group</strong></span><span class="sep">·</span><span>Hemel Hempstead, Hertfordshire</span><span class="sep">·</span><span class="mono">£22,000</span></div>
-        <div class="closing ok">Posted 1 Nov</div>
-        <p class="snippet">AI &amp; Digital Marketing Apprentice - Hemel Hempstead Are you are looking to earn while you learn? Are you looking to kickstart your career in Digital Marketing? Are you looking to join a business that is financially stable with very exciting expansion plans? If so, then look no f…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5949018683?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5947727544?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Digital Content Marketing Executive</a></h2>
-        <div class="meta"><span><strong>Lumon</strong></span><span class="sep">·</span><span>Farringdon, Central London</span></div>
-        <div class="closing ok">Posted 31 Oct</div>
-        <p class="snippet">Who are we? Lumon&#x27;s mission is to become the world&#x27;s most trusted currency partner. Businesses and individuals move money across borders through us, whether that&#x27;s paying an overseas supplier or sending money home to family. We back it with technology that does the heavy lifting…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5947727544?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5947799527?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Account Executive - Brand Impact</a></h2>
-        <div class="meta"><span><strong>FLEHILUK Fleishman Hillard</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 31 Oct</div>
-        <p class="snippet">Agency: FleishmanHillard Job Function: Communications and PR Job Subfunction: Public Relations Job Description: Why FleishmanHillard? We have been named PRWeek’s Global Agency of the Year and Best Places to Work; a “Standout Agency” on Advertising Age’s A-List; NAFE’s “Top 50 Co…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5947799527?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5947406122?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing Assistant - BOSS</a></h2>
-        <div class="meta"><span><strong>Coty</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 31 Oct</div>
-        <p class="snippet">Marketing Assistant - BOSS HUGO BOSS MARKETING ASSISTANT - UK, COTY LUXURY 13 MONTHS INTERNSHIP We&#x27;re Coty, a global leader in beauty. We&#x27;re 2 in the world for Fragrance and 3 in the world in Colour Cosmetics with a portfolio of brands that have been known and loved for generati…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5947406122?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5947406121?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing Assistant - Kylie</a></h2>
-        <div class="meta"><span><strong>Coty</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 31 Oct</div>
-        <p class="snippet">Marketing Assistant - Kylie KYLIE COSMETICS MARKETING ASSISTANT - UK, COTY LUXURY 13 MONTHS INTERNSHIP We&#x27;re Coty, a global leader in beauty. We&#x27;re 1 in the world for Fragrance and 3 in the world in Colour Cosmetics with a portfolio of brands that have been known and loved for g…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5947406121?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5947406134?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Communications Assistant, Sustainability &amp; Responsible Marketing</a></h2>
-        <div class="meta"><span><strong>Coty</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 31 Oct</div>
-        <p class="snippet">Communications Assistant, Sustainability &amp; Responsible Marketing Corporate Affairs Assistant (Communications &amp; Sustainability) - COTY UK&amp;I 13 MONTHS INTERNSHIP July 2027 starting We&#x27;re Coty, a global leader in beauty. We&#x27;re 1 in the world for Fragrance and 3 in the world in Colo…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5947406134?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Careers page</span></div>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers page</span></div>
         <h2><a href="https://www.fdry.com/careers/digital-marketing-executive/" target="_blank" rel="noopener">Digital Marketing Executive</a></h2>
         <div class="meta"><span><strong>FDRY</strong></span></div>
         <div class="closing ok">First seen 30 Oct</div>
         
         <a class="apply" href="https://www.fdry.com/careers/digital-marketing-executive/" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Careers page</span></div>
+      <article class="listing" data-cats="Client services">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers page</span></div>
         <h2><a href="https://www.fdry.com/careers/account-executive/" target="_blank" rel="noopener">Account Executive</a></h2>
         <div class="meta"><span><strong>FDRY</strong></span></div>
-        <div class="closing ok">First seen 30 Oct</div>
+        <div class="closing ok">First seen 30 Oct · <span class="tag">Client services</span></div>
         
         <a class="apply" href="https://www.fdry.com/careers/account-executive/" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Careers page</span></div>
-        <h2><a href="https://kaizen.co.uk/careers/digital-pr-assistant" target="_blank" rel="noopener">Digital PR Assistant</a></h2>
-        <div class="meta"><span><strong>Kaizen</strong></span></div>
-        <div class="closing ok">First seen 30 Oct</div>
-        
-        <a class="apply" href="https://kaizen.co.uk/careers/digital-pr-assistant" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Careers page</span></div>
+      <article class="listing" data-cats="Paid social|Paid search / PPC|Client services">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers page</span></div>
         <h2><a href="https://www.tugagency.com/about-agency/careers/paid-media-account-executive/" target="_blank" rel="noopener">Paid Media Account Executive</a></h2>
         <div class="meta"><span><strong>Tug Agency</strong></span></div>
-        <div class="closing ok">First seen 30 Oct</div>
+        <div class="closing ok">First seen 30 Oct · <span class="tag">Paid social</span><span class="tag">Paid search / PPC</span><span class="tag">Client services</span></div>
         
         <a class="apply" href="https://www.tugagency.com/about-agency/careers/paid-media-account-executive/" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Careers page</span></div>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers page</span></div>
         <h2><a href="https://unity.online/careers/marketing-executive/" target="_blank" rel="noopener">Marketing Executive</a></h2>
         <div class="meta"><span><strong>Unity Online</strong></span></div>
         <div class="closing ok">First seen 30 Oct</div>
         
         <a class="apply" href="https://unity.online/careers/marketing-executive/" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Careers page</span></div>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers page</span></div>
         <h2><a href="https://wma.agency/careers/marketing-social-media-internship-ny/" target="_blank" rel="noopener">Marketing &amp; Social Media Internship</a></h2>
         <div class="meta"><span><strong>WMA</strong></span></div>
         <div class="closing ok">First seen 30 Oct</div>
         
         <a class="apply" href="https://wma.agency/careers/marketing-social-media-internship-ny/" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
-        <h2><a href="https://www.reed.co.uk/jobs/webinar-and-social-media-marketing-executive/57507493" target="_blank" rel="noopener">Webinar and Social Media Marketing Executive</a></h2>
-        <div class="meta"><span><strong>RECRUITMENTiQ</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£30,000–£35,000</span></div>
-        <div class="closing ok">Posted 30 Oct</div>
-        <p class="snippet">LOCALiQ, an award-winning digital marketing agency within Newsquest Media Group, is looking for a creative and commercially minded Webinar and Social Media Marketing Executive to join our growing marketing team. Working remotely from anywhere in the UK, you&#x27;ll play a key role in…</p>
-        <a class="apply" href="https://www.reed.co.uk/jobs/webinar-and-social-media-marketing-executive/57507493" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5946992543?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Digital Marketing Exec - Mat Cover - Up To 32k Pro Rata</a></h2>
-        <div class="meta"><span><strong>James Webber Recruitment</strong></span><span class="sep">·</span><span>Beddington, Croydon</span><span class="sep">·</span><span class="mono">£32,000</span></div>
-        <div class="closing ok">Posted 30 Oct</div>
-        <p class="snippet">Digital Marketing Executive - 6 - 12 months Maternity Cover - Up To 32k Pro Rata - Croydon Areas Mon - Fri We are seeking a creative, organised and proactive Digital Marketing Executive to join a growing hospitality retail business based in the Croydon area on a fixed-term mater…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5946992543?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5946683887?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">PR &amp; Communications Executive</a></h2>
-        <div class="meta"><span><strong>Collinson</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 30 Oct</div>
-        <p class="snippet">Job Description Collinson International is the global leader in travel experiences and customer engagement. We partner with clients to deepen customer loyalty through enhanced travel experiences, to offer their customers smoother and more rewarding journeys, while delivering ins…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5946683887?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5946961008?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Communications Associate – SAP UK Intern (13 Month Placement)</a></h2>
-        <div class="meta"><span><strong>SAP IT Business Systeme</strong></span><span class="sep">·</span><span>Feltham, London</span></div>
-        <div class="closing ok">Posted 30 Oct</div>
-        <p class="snippet">Job Description What you’ll bring This placement is for a penultimate-year student from any degree discipline with a genuine interest in how organisations communicate. You’ll contribute to real work from day one. You’re curious, collaborative, and a clear communicator, someone w…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5946961008?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5946686259?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">UK Graduate Leadership Programme - Media Marketing Track (July Start)</a></h2>
-        <div class="meta"><span><strong>PMG</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 30 Oct</div>
-        <p class="snippet">We are PMG PMG, a global independent platform company engineered for impact, integrates business strategy, media, creative, and data within a single operating model powered by our proprietary operating system, Alli. With more than 1,000 employees, PMG partners with brands includ…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5946686259?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5946684470?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing &amp; Events Coordinator</a></h2>
-        <div class="meta"><span><strong>Handshake</strong></span><span class="sep">·</span><span>London, UK</span><span class="sep">·</span><span class="mono">£44,000–£55,000</span></div>
-        <div class="closing ok">Posted 30 Oct</div>
-        <p class="snippet">About Handshake Handshake was founded on a simple belief that everyone deserves a path to a great career, regardless of where they went to school or who they know. Today, we power 25 million job seekers, 1 million employers, and 1,600 educational institutions. About the Role We …</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5946684470?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Workday</span></div>
-        <h2><a href="https://dentsuaegis.wd3.myworkdayjobs.com/en-US/DAN_GLOBAL/job/London/Planning-Assistant_R1131933" target="_blank" rel="noopener">Planning Assistant</a></h2>
-        <div class="meta"><span><strong>Dentsu</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 29 Oct</div>
-        
-        <a class="apply" href="https://dentsuaegis.wd3.myworkdayjobs.com/en-US/DAN_GLOBAL/job/London/Planning-Assistant_R1131933" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Reed</span></div>
         <h2><a href="https://www.reed.co.uk/jobs/social-media-executive/57503820" target="_blank" rel="noopener">Social Media Executive</a></h2>
         <div class="meta"><span><strong>Sphere Digital Recruitment</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£33,000–£37,000</span></div>
         <div class="closing ok">Posted 29 Oct</div>
         <p class="snippet">Social Media Executive London - Hybrid - 2 days per week in the London office. Permanent About the Role We&#x27;re partnering with a high-profile, purpose-led consumer organisation to recruit a Social Media Executive to join their Brand &amp; Campaigns team. This is a hands-on role with …</p>
         <a class="apply" href="https://www.reed.co.uk/jobs/social-media-executive/57503820" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5945254837?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Digital Marketing Executive</a></h2>
-        <div class="meta"><span><strong>Walr</strong></span><span class="sep">·</span><span>North Lambeth, South East London</span></div>
-        <div class="closing ok">Posted 29 Oct</div>
-        <p class="snippet">Why Walr? Walr is the service-first data collection company built for the fast and the ambitious. Founded in 2020, we exist to elevate the role of the market researcher - not by adding more tools to juggle, but by removing the operational heavy lifting so teams can focus on what…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5945254837?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5945448806?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Digital Marketing &amp; Content Executive</a></h2>
-        <div class="meta"><span><strong>Dorchester Collection</strong></span><span class="sep">·</span><span>Mayfair, West London</span><span class="sep">·</span><span class="mono">£12,000</span></div>
-        <div class="closing ok">Posted 29 Oct</div>
-        <p class="snippet">Who we are Our Hotels We work with some of the most talented and unique individuals in our business, who always ensure the extraordinary guest experience of Dorchester Collection and the hotels within it. It is, after all, our people that bring our vision to life. As a member of…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5945448806?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5945456204?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Social Media and Content Executive</a></h2>
-        <div class="meta"><span><strong>Dorchester Collection</strong></span><span class="sep">·</span><span>Mayfair, West London</span><span class="sep">·</span><span class="mono">£12,000</span></div>
-        <div class="closing ok">Posted 29 Oct</div>
-        <p class="snippet">Who we are Our Hotels We work with some of the most talented and unique individuals in our business, who always ensure the extraordinary guest experience of Dorchester Collection and the hotels within it. It is, after all, our people that bring our vision to life. As a member of…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5945456204?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5945753704?se=fH1JfNrW8RG9T57WGr5igQ&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=BC0DBA2A9E9F306CC3572E134D4AD4D032ED74E9" target="_blank" rel="noopener">Marketing and Communications Assistant</a></h2>
-        <div class="meta"><span><strong>Start People Ltd</strong></span><span class="sep">·</span><span>Hounslow, London</span><span class="sep">·</span><span class="mono">£34,000–£37,000</span></div>
-        <div class="closing ok">Posted 29 Oct</div>
-        <p class="snippet">Marketing &amp; Communications Assistant Location: Hounslow, West London Working pattern: Hybrid – 3 days in the office, 2 days working from home Salary: Up to £37,000 per annum Benefits: Quarterly bonus, 25 days’ annual leave plus bank holidays About the opportunity An established …</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5945753704?se=fH1JfNrW8RG9T57WGr5igQ&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=BC0DBA2A9E9F306CC3572E134D4AD4D032ED74E9" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5945458765?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Account Executive, Influencer Marketing</a></h2>
-        <div class="meta"><span><strong>Acceleration Partners</strong></span><span class="sep">·</span><span>London, UK</span><span class="sep">·</span><span class="mono">£27,000–£37,000</span></div>
-        <div class="closing ok">Posted 29 Oct</div>
-        <p class="snippet">Position: Account Specialist The Account Specialist position is a remote, work-from-home role, as are all positions at Acceleration Partners (a structure central to our culture and vision to change the work/life paradigm). Some travel may be required for client meetings, interna…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5945458765?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Workday</span></div>
+      <article class="listing" data-cats="Planning / strategy">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/London/Media-Executive_JR0100990-1" target="_blank" rel="noopener">Media Executive</a></h2>
         <div class="meta"><span><strong>Havas</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 28 Oct</div>
+        <div class="closing ok">Posted 28 Oct · <span class="tag">Planning / strategy</span></div>
         
         <a class="apply" href="https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/London/Media-Executive_JR0100990-1" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Teamtailor</span></div>
-        <h2><a href="https://careers.akauk.com/jobs/8630703-digital-media-executive" target="_blank" rel="noopener">Digital Media Executive</a></h2>
-        <div class="meta"><span><strong>AKA UK</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 28 Oct</div>
-        <p class="snippet">Digital Media Executive Team: Digital Media Reports to: Digital Manager / Senior Digital Manager Location: Head office, London’s West End (hybrid, 3 days a week in the office) About AKA AKA is one of the world’s most successful entertainment marketing agencies. We offer full-ser…</p>
-        <a class="apply" href="https://careers.akauk.com/jobs/8630703-digital-media-executive" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Greenhouse</span></div>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://job-boards.greenhouse.io/pmg/jobs/8882147002" target="_blank" rel="noopener">UK Graduate Leadership Programme - Media Marketing Track (July Start)</a></h2>
         <div class="meta"><span><strong>Digital Voices</strong></span><span class="sep">·</span><span>London, England, United Kingdom</span></div>
         <div class="closing ok">Posted 28 Oct</div>
         
         <a class="apply" href="https://job-boards.greenhouse.io/pmg/jobs/8882147002" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Reed</span></div>
         <h2><a href="https://www.reed.co.uk/jobs/digital-marketing-executive/57502657" target="_blank" rel="noopener">Digital Marketing Executive</a></h2>
         <div class="meta"><span><strong>Michael Page Digital</strong></span><span class="sep">·</span><span>London</span></div>
         <div class="closing ok">Posted 28 Oct</div>
         <p class="snippet">This is a broad B2B digital marketing role focused on improving online visibility across partner ecosystems, industry marketplaces and review platforms, whilst supporting marketing operations, analytics and acquisition activity. The successful candidate will own projects from pl…</p>
         <a class="apply" href="https://www.reed.co.uk/jobs/digital-marketing-executive/57502657" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
-        <h2><a href="https://www.reed.co.uk/jobs/amazon-marketplace-and-ppc-executive/57500761" target="_blank" rel="noopener">Amazon Marketplace and PPC Executive</a></h2>
-        <div class="meta"><span><strong>Get Staffed Online Recruitment Limited</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£44,000–£47,000</span></div>
-        <div class="closing ok">Posted 28 Oct</div>
-        <p class="snippet">The Opportunity Our client is recruiting an Amazon Marketplace and PPC Executive to take hands-on commercial ownership of their Amazon channel and drive profitable sales growth. This is not a PPC-only position; the successful candidate will be responsible for Amazon sales perfor…</p>
-        <a class="apply" href="https://www.reed.co.uk/jobs/amazon-marketplace-and-ppc-executive/57500761" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5944487008?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Social Media &amp; Creative Content Executive</a></h2>
-        <div class="meta"><span><strong>The Hari</strong></span><span class="sep">·</span><span>Knightsbridge, South West London</span><span class="sep">·</span><span class="mono">£28,840</span></div>
-        <div class="closing ok">Posted 28 Oct</div>
-        <p class="snippet">About the Hotel The Hari is a stylish 5-star luxury hotel in the heart of Belgravia. The areas of Chelsea, Kensington, and Knightsbridge. A beacon of modern luxury and impeccable service. A destination for locals to love and guests to discover. Our service culture is a link betw…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5944487008?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5944766327?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing Assistant</a></h2>
-        <div class="meta"><span><strong>Fabric</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 28 Oct</div>
-        <p class="snippet">Since opening in 1999, fabric has established itself as one of the world’s most respected electronic music institutions. With a commitment to forward-thinking music, exceptional sound and club culture, fabric has welcomed over 8 million people through its doors and been voted th…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5944766327?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5944934685?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Performance Marketing Assistant</a></h2>
-        <div class="meta"><span><strong>Charles Tyrwhitt</strong></span><span class="sep">·</span><span>The City, Central London</span></div>
-        <div class="closing ok">Posted 28 Oct</div>
-        <p class="snippet">The Role As a Performance Marketing Assistant, you will support the day-to-day execution and administration of paid media activity across Google Ads and Microsoft Ads. This is an excellent opportunity for someone looking to start or develop their career in digital marketing. Wor…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5944934685?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5944530723?se=_mHYfNrW8RGZ_cfEpAkyOw&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=94F95CF2A28A2E8515D8AE94BB7008789615CCE2" target="_blank" rel="noopener">Amazon Marketplace and PPC Executive</a></h2>
-        <div class="meta"><span><strong>AC Global</strong></span><span class="sep">·</span><span>London, UK</span><span class="sep">·</span><span class="mono">£44,000–£47,000</span></div>
-        <div class="closing ok">Posted 28 Oct</div>
-        <p class="snippet">The Opportunity We are recruiting an Amazon Marketplace and PPC Executive to take hands-on commercial ownership of our Amazon channel and drive profitable sales growth. This is not a PPC-only position; the successful candidate will be responsible for Amazon sales performance, ad…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5944530723?se=_mHYfNrW8RGZ_cfEpAkyOw&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=94F95CF2A28A2E8515D8AE94BB7008789615CCE2" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5944924185?se=sOMmfdrW8RG516NN24fK-g&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=AD1903D102598AE9D0C661EF9A6E51B950EC188C" target="_blank" rel="noopener">Graduate Media Account Executive</a></h2>
-        <div class="meta"><span><strong>BrighterBox</strong></span><span class="sep">·</span><span>London, UK</span><span class="sep">·</span><span class="mono">£26,000</span></div>
-        <div class="closing ok">Posted 28 Oct</div>
-        <p class="snippet">This independent media agency has built its reputation backing ambitious brands and organisations that want to punch above their weight. Working with a varied mix of clients, from well-known consumer brands to purpose-led organisations and charities, they help businesses grow th…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5944924185?se=sOMmfdrW8RG516NN24fK-g&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=AD1903D102598AE9D0C661EF9A6E51B950EC188C" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5944336335?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Growth Marketing Executive</a></h2>
-        <div class="meta"><span><strong>Treatwell</strong></span><span class="sep">·</span><span>London, UK</span><span class="sep">·</span><span class="mono">£42,000</span></div>
-        <div class="closing ok">Posted 28 Oct</div>
-        <p class="snippet">As a Growth Marketing Executive at Treatwell you will play a pivotal role in driving Treatwell’s user acquisition strategy across all our 13 markets. Operating at the intersection of data, media buying, and creative strategy, this role involves managing and scaling performance m…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5944336335?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5944530692?se=4JjXfdrW8RG74q0YsdnZrA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=12C53E6F4AD2482008143333555DB9C7A7E9789B" target="_blank" rel="noopener">Content Executive</a></h2>
-        <div class="meta"><span><strong>Auxo Future Build</strong></span><span class="sep">·</span><span>Finchley, North London</span><span class="sep">·</span><span class="mono">£26,500–£27,000</span></div>
-        <div class="closing ok">Posted 28 Oct</div>
-        <p class="snippet">Content Executive North London, Finchley Permanent | Full time Hours: Full-time, 40 hours per week Salary: £26,500 (£27,000 after probation) The Role We are looking for a Content Executive to join a growing digital media business and support the day-to-day management of client c…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5944530692?se=4JjXfdrW8RG74q0YsdnZrA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=12C53E6F4AD2482008143333555DB9C7A7E9789B" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5944670547?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Community Executive</a></h2>
-        <div class="meta"><span><strong>Founders Forum Group</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 28 Oct</div>
-        <p class="snippet">On-site | Founders Forum Events | Full time | London, England, United Kingdom Work with an established events team to deliver some of Europe&#x27;s best-in-class tech events and grow our global community of inspiring founders. About Founders Forum Group Founders Forum Group is a glob…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5944670547?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5944311957?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Spring 2027 - Intern, Brand Marketing (London)</a></h2>
-        <div class="meta"><span><strong>Excel Sports Management</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 28 Oct</div>
-        <p class="snippet">Excel Sports Management is an industry-leading sports agency representing top-tier talent, blue-chip brands and marquee properties. Our success is rooted in our people, our high character reputation and our commitment to creating a diverse and welcoming workplace. We focus on te…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5944311957?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
-        <h2><a href="https://www.reed.co.uk/jobs/marketing-content-assistant/57497958" target="_blank" rel="noopener">Marketing Content Assistant</a></h2>
-        <div class="meta"><span><strong>Handle Recruitment</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£30,000–£35,000</span></div>
-        <div class="closing ok">Posted 27 Oct</div>
-        <p class="snippet">Handle Recruitment is partnering with a well-established household brand looking to bring a Content Assistant into its growing team. This is a great opportunity to develop your digital content and e-commerce experience, working across website content, SEO and marketing campaigns…</p>
-        <a class="apply" href="https://www.reed.co.uk/jobs/marketing-content-assistant/57497958" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Reed</span></div>
         <h2><a href="https://www.reed.co.uk/jobs/content-assistant/57497867" target="_blank" rel="noopener">Content Assistant</a></h2>
         <div class="meta"><span><strong>Michael Page Business Support</strong></span><span class="sep">·</span><span>Guildford</span><span class="sep">·</span><span class="mono">£28,000–£32,000</span></div>
         <div class="closing ok">Posted 27 Oct</div>
         <p class="snippet">As a Content Assistant in Guildford, you will help create, organise and publish content that supports marketing activity across the Media &amp; Agency sector. You will keep content accurate and well presented, helping campaigns and day-to-day communications run smoothly. Client Deta…</p>
         <a class="apply" href="https://www.reed.co.uk/jobs/content-assistant/57497867" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
-        <h2><a href="https://www.reed.co.uk/jobs/e-commerce-executive/57498820" target="_blank" rel="noopener">E-Commerce Executive</a></h2>
-        <div class="meta"><span><strong>Pursuit Resources Group</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 27 Oct</div>
-        <p class="snippet">Location: Home-based with travel to South Essex once a week. Driver : You must be a car driver with access to your own vehicle. Hours: Monday to Friday, full-time, permanent. Our client is a well-loved British food brand that has been part of UK kitchens for more than 50 years. …</p>
-        <a class="apply" href="https://www.reed.co.uk/jobs/e-commerce-executive/57498820" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5943783539?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Content Marketing Executive</a></h2>
-        <div class="meta"><span><strong>Grundon</strong></span><span class="sep">·</span><span>Slough, Berkshire</span></div>
-        <div class="closing ok">Posted 27 Oct</div>
-        <p class="snippet">Salary: Competitive Hours: Monday- Friday 9am- 5:00pm At Grundon, we&#x27;re looking for a creative, commercially minded Content Marketing Executive to join our eight strong Marketing team based in Colnbrook near Heathrow Airport. This is an opportunity for someone who knows how to t…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5943783539?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5943403879?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Account Executive</a></h2>
-        <div class="meta"><span><strong>MarketFully</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 27 Oct</div>
-        <p class="snippet">Where: 100% Remote, United Kingdom Type: Full-time, salaried Multilingual Content Marketing, Social &amp; Technology Solutions MarketFully helps ambitious brands grow in every market they operate in. Our solutions and services cover multilingual content marketing, search, social eng…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5943403879?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5943655740?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Social Media Executive</a></h2>
-        <div class="meta"><span><strong>Mumsnet</strong></span><span class="sep">·</span><span>Kentish Town, North West London</span><span class="sep">·</span><span class="mono">£32,000–£35,000</span></div>
-        <div class="closing ok">Posted 27 Oct</div>
-        <p class="snippet">About Mumsnet Mumsnet is the UK’s largest network for parents, with a thriving community of millions who come together to share advice, spark conversation and navigate the realities of family life. Our forums are where culture happens first, from viral parenting moments to hones…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5943655740?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5943784221?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing Executive</a></h2>
-        <div class="meta"><span><strong>Morson Edge</strong></span><span class="sep">·</span><span>South West London, London</span><span class="sep">·</span><span class="mono">£30,000</span></div>
-        <div class="closing ok">Posted 27 Oct</div>
-        <p class="snippet">Marketing Executive London, SW Post code Hybrid – 3 days office / 2 days WFH Salary: Up to £32,000 10% bonus Ready to take the next step in your marketing career? Have you completed a marketing internship or placement and are now looking for your first permanent role? Or perhaps…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5943784221?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5940948225?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing Intern</a></h2>
-        <div class="meta"><span><strong>Coty</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 25 Oct</div>
-        <p class="snippet">Marketing Intern MARC JACOBS MARKETING ASSISTANT - UK, COTY LUXURY 13 MONTHS INTERNSHIP - PLACEMENT YEAR JULY STARTING We&#x27;re Coty, a global leader in beauty. We&#x27;re 2 in the world for Fragrance and 3 in the world in Colour Cosmetics with a portfolio of brands that have been known…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5940948225?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5940948234?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">PR and Communications Intern</a></h2>
-        <div class="meta"><span><strong>Coty</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 25 Oct</div>
-        <p class="snippet">PR and Communications Intern PR &amp; INFLUENCER MARKETING INTERN JULY STARTING 13 MONTHS An exciting opportunity for a graduate to join Coty&#x27;s Luxury PR &amp; Influencer Marketing team. This role offers hands-on experience across PR and Influencer Marketing supporting some of the world…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5940948234?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5939916419?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Italian Digital PR Assistant</a></h2>
-        <div class="meta"><span><strong>The Opportunity Hub UK</strong></span><span class="sep">·</span><span>London, UK</span><span class="sep">·</span><span class="mono">£28,000–£30,000</span></div>
-        <div class="closing ok">Posted 24 Oct</div>
-        <p class="snippet">Take the next step in your digital marketing career as an Italian Digital PR Assistant, working on creative campaigns that secure media coverage across the Italian market. Company Overview The Opportunity Hub UK is recruiting on behalf of a growing London-based digital marketing…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5939916419?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5940270542?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Digital Marketing Executive</a></h2>
-        <div class="meta"><span><strong>Ocuco</strong></span><span class="sep">·</span><span>Gunnersbury, West London</span></div>
-        <div class="closing ok">Posted 24 Oct</div>
-        <p class="snippet">Job Description: As a Digital Marketing Executive, you’ll join our Client Marketing Team, based in our office in Chiswick, London. This is a client-facing role involving the day-to-day management of a portfolio of clients, as well as planning, creating and delivering effective B…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5940270542?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5940234751?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing Executive</a></h2>
-        <div class="meta"><span><strong>Veriforce</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 24 Oct</div>
-        <p class="snippet">We see a world where we all contribute to a thriving planet and together, we are a collective force for good. Planet Mark is a sustainability certification which recognises outstanding achievements, encourages action, and builds an empowered community of like-minded individuals.…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5940234751?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5940250032?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Display &amp; Paid Social executive</a></h2>
-        <div class="meta"><span><strong>IG Group</strong></span><span class="sep">·</span><span>The City, Central London</span></div>
-        <div class="closing ok">Posted 24 Oct</div>
-        <p class="snippet">Job Title Display &amp; Paid Social executive Job Description So, who are we? IG has been at the centre of retail trading and investment since 1974, when we helped create the market for financial spread betting. Today, we&#x27;re a FTSE100 fintech operating across five continents, servin…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5940250032?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5940221334?se=Zhc8ftrW8RG74q0YsdnZrA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=2A631FA1C5085882063025A857E0FF695C7F8AC1" target="_blank" rel="noopener">PR Intern</a></h2>
-        <div class="meta"><span><strong>Glassworks London</strong></span><span class="sep">·</span><span>Haggerston, East London</span></div>
-        <div class="closing ok">Posted 24 Oct</div>
-        <p class="snippet">Glassworks London is an independent fashion brand with a strong focus on style, discovery and newness. This placement sits within our PR and marketing activity and offers practical experience of how an independent fashion brand researches, organises and manages press and creator…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5940221334?se=Zhc8ftrW8RG74q0YsdnZrA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=2A631FA1C5085882063025A857E0FF695C7F8AC1" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Workday</span></div>
+      <article class="listing" data-cats="Client services|OOH / TV / AV / print">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/London/AV-Account-Executive_JR0100918" target="_blank" rel="noopener">AV Account Executive</a></h2>
         <div class="meta"><span><strong>Havas</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
+        <div class="closing ok">Posted 23 Oct · <span class="tag">Client services</span><span class="tag">OOH / TV / AV / print</span></div>
         
         <a class="apply" href="https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/London/AV-Account-Executive_JR0100918" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5938546986?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Digital Marketing Executive, UK Digital Acquisition</a></h2>
-        <div class="meta"><span><strong>American Express</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
-        <p class="snippet">Digital Marketing Executive, UK Digital Acquisition LONDON, LONDON, United Kingdom(Hybrid) Job Description International Card Services (ICS) brings together our International Consumer and Small &amp; Medium Size Enterprises (SME) issuing activities, as well as our Commercial Large M…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5938546986?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5938546255?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Social Video Intern</a></h2>
-        <div class="meta"><span><strong>NBC Universal</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
-        <p class="snippet">NBCUniversal is one of the world&#x27;s leading media and entertainment companies. We create world-class content, which we distribute across our portfolio of film, television, and streaming, and bring to life through our global theme park destinations, consumer products, and experien…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5938546255?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5938546249?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Communications Intern (Universal Destinations &amp; Experiences)</a></h2>
-        <div class="meta"><span><strong>NBC Universal</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
-        <p class="snippet">NBCUniversal is one of the world&#x27;s leading media and entertainment companies. We create world-class content, which we distribute across our portfolio of film, television, and streaming, and bring to life through our global theme park destinations, consumer products, and experien…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5938546249?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5939036660?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Data Analyst</a></h2>
-        <div class="meta"><span><strong>UK Health Security Agency</strong></span><span class="sep">·</span><span>Canary Wharf, East London</span><span class="sep">·</span><span class="mono">£41,983–£52,113</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
-        <p class="snippet">The UK Health Security Agency (UKHSA) prevents, prepares for and responds to infectious diseases, and environmental hazards, to keep all our communities safe, save lives and protect livelihoods. We provide scientific and operational leadership, working with local, national and i…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5939036660?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5938546221?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Acquired Content Distribution Strategy Intern</a></h2>
-        <div class="meta"><span><strong>NBC Universal</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
-        <p class="snippet">NBCUniversal is one of the world&#x27;s leading media and entertainment companies. We create world-class content, which we distribute across our portfolio of film, television, and streaming, and bring to life through our global theme park destinations, consumer products, and experien…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5938546221?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5938546260?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Corporate Communications Intern</a></h2>
-        <div class="meta"><span><strong>NBC Universal</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
-        <p class="snippet">NBCUniversal is one of the world&#x27;s leading media and entertainment companies. We create world-class content, which we distribute across our portfolio of film, television, and streaming, and bring to life through our global theme park destinations, consumer products, and experien…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5938546260?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5939000242?se=4JjXfdrW8RG74q0YsdnZrA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=E765009762CC63ACAF94DF3F47D207C928022DA1" target="_blank" rel="noopener">Business Marketing Operations Associate - Publishing</a></h2>
-        <div class="meta"><span><strong>Capital Group</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
-        <p class="snippet">“I can be myself at work.” You are more than a job title. We want you to feel comfortable doing great work and bringing your best, authentic self to everything you do. We value your talents, traditions, and uniqueness—and we’re committed to fostering a strong sense of belonging …</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5939000242?se=4JjXfdrW8RG74q0YsdnZrA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=E765009762CC63ACAF94DF3F47D207C928022DA1" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5939062485?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Content Executive</a></h2>
-        <div class="meta"><span><strong>re:act marketing ltd</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
-        <p class="snippet">12 month fixed term contract Want to work for a disruptive marketing agency in the heart of London? Re:act was founded by two global FMCG marketers with experience in Health &amp; Beauty, Gaming, Food &amp; Drink and Technology and since 2019 Re:act has grown from a team of 2 to a team …</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5939062485?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5938546239?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Audience Insights &amp; Analytics Intern</a></h2>
-        <div class="meta"><span><strong>NBC Universal</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
-        <p class="snippet">NBCUniversal is one of the world&#x27;s leading media and entertainment companies. We create world-class content, which we distribute across our portfolio of film, television, and streaming, and bring to life through our global theme park destinations, consumer products, and experien…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5938546239?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5938546236?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Content Planning &amp; Acquisitions Intern</a></h2>
-        <div class="meta"><span><strong>NBC Universal</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
-        <p class="snippet">About NBCUniversal International Networks &amp; Direct-to-Consumer As one of the world&#x27;s premier entertainment portfolios, NBCUniversal International Networks &amp; Direct-to-Consumer delivers compelling content and brands to over 110 territories across Europe, the Middle East, Africa, …</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5938546236?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5938546231?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Trade Marketing Intern</a></h2>
-        <div class="meta"><span><strong>NBC Universal</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
-        <p class="snippet">NBCUniversal is one of the world&#x27;s leading media and entertainment companies. We create world-class content, which we distribute across our portfolio of film, television, and streaming, and bring to life through our global theme park destinations, consumer products, and experien…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5938546231?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5938546235?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Franchise Marketing Intern (Consumer Products)</a></h2>
-        <div class="meta"><span><strong>NBC Universal</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 23 Oct</div>
-        <p class="snippet">NBCUniversal is one of the world&#x27;s leading media and entertainment companies. We create world-class content, which we distribute across our portfolio of film, television, and streaming, and bring to life through our global theme park destinations, consumer products, and experien…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5938546235?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Jibe</span></div>
+      <article class="listing" data-cats="Client services">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://careers.publicisgroupe.com/jobs/178754?lang=en-us" target="_blank" rel="noopener">Client Development Associate</a></h2>
         <div class="meta"><span><strong>Publicis Groupe - CJ</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 22 Oct</div>
+        <div class="closing ok">Posted 22 Oct · <span class="tag">Client services</span></div>
         <p class="snippet">Experience level: Entry. Company description As part of Publicis Groupe, CJ Affiliate is the leader in Global Affiliate Marketing. We take pride in our innovative technology, comprehensive data solutions and our people. We equip our teams with …</p>
         <a class="apply" href="https://careers.publicisgroupe.com/jobs/178754?lang=en-us" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Jibe</span></div>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://careers.publicisgroupe.com/jobs/175855?lang=en-us" target="_blank" rel="noopener">Creative and Design Executive</a></h2>
         <div class="meta"><span><strong>Publicis Groupe - Publicis Media</strong></span><span class="sep">·</span><span>London</span></div>
         <div class="closing ok">Posted 22 Oct</div>
         <p class="snippet">Experience level: Entry. Company description Publicis Connected Media UK is a fully end-to-end offering that unites media, commerce, CXM, social and data to deliver connected consumer experiences and drive exceptional business outcomes for our …</p>
         <a class="apply" href="https://careers.publicisgroupe.com/jobs/175855?lang=en-us" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5937070665?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Digital Marketing &amp; Content Executive</a></h2>
-        <div class="meta"><span><strong>The Dorchester</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 22 Oct</div>
-        <p class="snippet">Join us as a Digital Marketing &amp; Content Executive at The Dorchester, 45 Park Lane and Coworth Park recognised as one of ‘The Sunday Times Top 10 Best Places to Work for’ in 2024-2026 and ‘Hotel of the Year – London’ at the 2024 AA Hospitality Awards. We continually strive to bu…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5937070665?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5937652834?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Social Media &amp; Community Management Assistant</a></h2>
-        <div class="meta"><span><strong>Nationwide</strong></span><span class="sep">·</span><span>Liverpool Street, Central London</span></div>
-        <div class="closing ok">Posted 22 Oct</div>
-        <p class="snippet">Description Are you social media savvy, with a passion for helping customers, building meaningful connections and finding creative ways for brands to show up online? We’re looking for a talented individual to play a key role in managing Nationwide’s social media communities, sup…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5937652834?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5937647997?se=fH1JfNrW8RG9T57WGr5igQ&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=9057C89125C435ECC44218FCA93AEB0B306255F5" target="_blank" rel="noopener">Talent &amp; Marketing Assistant</a></h2>
-        <div class="meta"><span><strong>Hansen Filler Associates Limited</strong></span><span class="sep">·</span><span>Farringdon, Central London</span></div>
-        <div class="closing ok">Posted 22 Oct</div>
-        <p class="snippet">Hansen Filler is a specialist Executive Search and Interim Management consultancy working with organisations across a broad range of sectors in the UK and internationally. As our business continues to scale, we are looking for a proactive, organised, and creative Talent &amp; Market…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5937647997?se=fH1JfNrW8RG9T57WGr5igQ&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=9057C89125C435ECC44218FCA93AEB0B306255F5" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5937651662?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing Assistant EMEA - Shaw Contract</a></h2>
-        <div class="meta"><span><strong>Shaw Industries</strong></span><span class="sep">·</span><span>Farringdon, Central London</span></div>
-        <div class="closing ok">Posted 22 Oct</div>
-        <p class="snippet">Job Title Marketing Assistant EMEA - Shaw Contract Position Overview Shaw Contract believes innovative design inspires change. The way we live, work, think, create and heal - all made better by design. As a global design leader for commercial spaces, our Cradle-to-Cradle Certifi…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5937651662?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5937237472?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing Assistant EMEA - Shaw Contract</a></h2>
-        <div class="meta"><span><strong>Shaw Industries Inc</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 22 Oct</div>
-        <p class="snippet">3187 - London, 33 Great Sutton Street, London, England EC1V 0DX United Kingdom Full time R-157747 Job Title Marketing Assistant EMEA - Shaw Contract Position Overview Shaw Contract believes innovative design inspires change. The way we live, work, think, create and heal - all ma…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5937237472?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5938360400?se=QHqrfNrW8RG9T57WGr5igQ&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=CB187B89E9981ED053DAF6A3E0175E2E509E9A50" target="_blank" rel="noopener">SEO Executive</a></h2>
-        <div class="meta"><span><strong>Additional Resources</strong></span><span class="sep">·</span><span>Leavesden, Watford</span><span class="sep">·</span><span class="mono">£30,000–£35,000</span></div>
-        <div class="closing ok">Posted 22 Oct</div>
-        <p class="snippet">An opportunity has arisen for an SEO Executive to join a design and digital marketing agency providing website design, branding and online marketing services to small and medium-sized businesses. In this role, you will work across multiple client websites, developing and deliver…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5938360400?se=QHqrfNrW8RG9T57WGr5igQ&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=CB187B89E9981ED053DAF6A3E0175E2E509E9A50" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5938296013?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Regional Digital Media &amp; Content Executive – UK &amp; EU</a></h2>
-        <div class="meta"><span><strong>COYA</strong></span><span class="sep">·</span><span>London, UK</span><span class="sep">·</span><span class="mono">£36,837</span></div>
-        <div class="closing ok">Posted 22 Oct</div>
-        <p class="snippet">Join the COYA Family! COYA is a luxury lifestyle group with two iconic London venues in Mayfair and the City of London, alongside stunning international locations including Dubai, Barcelona, Ibiza, Monte Carlo, Marbella and more. At COYA, our teams are like family. We are passio…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5938296013?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5937111775?se=4JjXfdrW8RG74q0YsdnZrA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=E6D71C9FD202E28F9CBFA708E67301CC0D81075C" target="_blank" rel="noopener">Digital Coordinator</a></h2>
-        <div class="meta"><span><strong>Office Angels</strong></span><span class="sep">·</span><span>Covent Garden, Central London</span><span class="sep">·</span><span class="mono">£29,000–£31,000</span></div>
-        <div class="closing ok">Posted 22 Oct</div>
-        <p class="snippet">Job Title: Digital Coordinator Location: London - Covent Garden Contract Type: Permanent, Part-Time Salary: £31,000 Pro Rata Working Pattern: Hybrid Hours: Either 3 days per week or 5 days per week (4 hours per day) About Our Client: Our client is an innovative media and content…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5937111775?se=4JjXfdrW8RG74q0YsdnZrA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=E6D71C9FD202E28F9CBFA708E67301CC0D81075C" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Jibe</span></div>
+      <article class="listing" data-cats="Client services">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://careers.publicisgroupe.com/jobs/174736?lang=en-us" target="_blank" rel="noopener">Account Executive</a></h2>
         <div class="meta"><span><strong>Publicis Groupe - Taylor Herring</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 21 Oct</div>
+        <div class="closing ok">Posted 21 Oct · <span class="tag">Client services</span></div>
         <p class="snippet">Experience level: Entry. Company description Taylor Herring is an award-winning creative PR, social media and influencer agency that delivers solid business outcomes for its consumer brand clients through smart thinking, creativity and innovati…</p>
         <a class="apply" href="https://careers.publicisgroupe.com/jobs/174736?lang=en-us" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Jibe</span></div>
+      <article class="listing" data-cats="Planning / strategy">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://careers.publicisgroupe.com/jobs/178354?lang=en-us" target="_blank" rel="noopener">Analyst (Media)</a></h2>
         <div class="meta"><span><strong>Publicis Groupe - Digitas UK</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 21 Oct</div>
+        <div class="closing ok">Posted 21 Oct · <span class="tag">Planning / strategy</span></div>
         <p class="snippet">Experience level: Entry. Company description At Digitas, we harness the power of connection to make positive impact everyday. We have a relentless focus on creating connections to help our clients’ businesses grow, connecting diverse people, id…</p>
         <a class="apply" href="https://careers.publicisgroupe.com/jobs/178354?lang=en-us" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5936755442?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing Assistant</a></h2>
-        <div class="meta"><span><strong>Taylor James Resourcing Limited</strong></span><span class="sep">·</span><span>East London, London</span><span class="sep">·</span><span class="mono">£40,000</span></div>
-        <div class="closing ok">Posted 21 Oct</div>
-        <p class="snippet">We are seeking a creative, digitally focused and highly motivated Marketing Assistant to join our Marketing team. Reporting to the Marketing Manager, you will play a key role in delivering innovative and effective marketing programmes that support our brands, strengthen customer…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5936755442?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5936350462?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing Executive - Entertainment &amp; Live Experiences</a></h2>
-        <div class="meta"><span><strong>The Event Academy</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 21 Oct</div>
-        <p class="snippet">To apply for this role, you must be a graduate of the Event Academy . Sector: Entertainment &amp; Live Experiences Title of role: Marketing Executive Reporting to: Marketing &amp; Business Development Leadership / Line Manager Salary on offer: Depending on experience Location/Office add…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5936350462?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5936724448?se=ovG0e9rW8RGkV4BSIpFfaA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=03B228B97B3F49D465EF92640D0F0B0D59B43DFF" target="_blank" rel="noopener">Brand Development Executive</a></h2>
-        <div class="meta"><span><strong>Universal Business Team</strong></span><span class="sep">·</span><span>Sidcup, Kent</span><span class="sep">·</span><span class="mono">£35,000–£40,000</span></div>
-        <div class="closing ok">Posted 21 Oct</div>
-        <p class="snippet">Job Title: Brand Development Executive - Health, Beauty &amp; Wellness Location: Kent, Sidcup (Office-based with flexibility once established) Salary: £35,000 - £40,000 DOE Company Bonus Hours: 08.30am-5pm Monday to Friday (Flexibility if needed) Are you someone who loves bringing b…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5936724448?se=ovG0e9rW8RGkV4BSIpFfaA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=03B228B97B3F49D465EF92640D0F0B0D59B43DFF" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5936933181?se=QHqrfNrW8RG9T57WGr5igQ&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=9732758EC8975416BD3D1AE4B02281448237EF32" target="_blank" rel="noopener">Content / SEO Assistant</a></h2>
-        <div class="meta"><span><strong>Mandeville</strong></span><span class="sep">·</span><span>Farringdon, Central London</span><span class="sep">·</span><span class="mono">£32,000–£36,000</span></div>
-        <div class="closing ok">Posted 21 Oct</div>
-        <p class="snippet">SEO &amp; Content Assistant - Premium Lifestyle Brand Based in Middlesex / West London £35,000 per annum Join a leading global lifestyle brand at the forefront of innovation and design. We&#x27;re a premium, growth-focused lifestyle brand with a strong presence across retail, eCommerce, …</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5936933181?se=QHqrfNrW8RG9T57WGr5igQ&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=9732758EC8975416BD3D1AE4B02281448237EF32" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5936453313?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Paid Media Executive</a></h2>
-        <div class="meta"><span><strong>Topdeck Travel</strong></span><span class="sep">·</span><span>Gunnersbury, West London</span></div>
-        <div class="closing ok">Posted 21 Oct</div>
-        <p class="snippet">Reporting to: Paid Media Manager Location: Chiswick, London (3 days per week in office / 2 days remote) Contract: Full time / Permanent Reports to : Paid Media Manager About Global Touring Global Touring is home to three travel brands: Topdeck Travel, Back-Roads Touring and Gras…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5936453313?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
-        <h2><a href="https://www.reed.co.uk/jobs/performance-marketing-executive/57475904" target="_blank" rel="noopener">Performance Marketing Executive</a></h2>
-        <div class="meta"><span><strong>Handle Recruitment</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£30,000–£35,000</span></div>
-        <div class="closing ok">Posted 20 Oct</div>
-        <p class="snippet">Handle Recruitment is looking for a proactive, commercially-minded Performance Marketing Executive to join our client&#x27;s growing sports business. Hybrid | Central London | 3 days in office 30,000- 36,000 depending on experience The Client Our client is a global sports business, c…</p>
-        <a class="apply" href="https://www.reed.co.uk/jobs/performance-marketing-executive/57475904" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
-        <h2><a href="https://www.reed.co.uk/jobs/shopper-marketing-executive/57478149" target="_blank" rel="noopener">Shopper Marketing Executive</a></h2>
-        <div class="meta"><span><strong>Pursuit Resources Group</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£32,000–£35,000</span></div>
-        <div class="closing ok">Posted 20 Oct</div>
-        <p class="snippet">Shopper Marketing Executive Location: Home-based with travel to South Essex once a week. You must be a car driver with access to your own vehicle due to the location of our client. Salary: 32,000 to 35,000 p.a Bonus: Up to 1,000 per year, based on team performance. Hours: Monday…</p>
-        <a class="apply" href="https://www.reed.co.uk/jobs/shopper-marketing-executive/57478149" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
-        <h2><a href="https://www.reed.co.uk/jobs/graduate-marketing-csa/57476858" target="_blank" rel="noopener">Graduate Marketing (CSA)</a></h2>
-        <div class="meta"><span><strong>Sphere Digital Recruitment</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£38,000</span></div>
-        <div class="closing ok">Posted 20 Oct</div>
-        <p class="snippet">Customer Success Associate London | Hybrid An exciting opportunity has arisen to join a fast-growing marketing technology business working with leading ecommerce and retail brands. This role is ideal for a recent graduate or someone with up to 2 years&#x27; experience looking to deve…</p>
-        <a class="apply" href="https://www.reed.co.uk/jobs/graduate-marketing-csa/57476858" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5935181643?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Digital Marketing Analyst</a></h2>
-        <div class="meta"><span><strong>The Opportunity Hub UK</strong></span><span class="sep">·</span><span>London, UK</span><span class="sep">·</span><span class="mono">£25,000–£30,000</span></div>
-        <div class="closing ok">Posted 20 Oct</div>
-        <p class="snippet">A leading company in the leisure and tourism industry is searching for a highly motivated and creative Digital Marketing Executive to join their Marketing teamA leading company in the leisure and tourism industry is searching for a highly motivated and creative Digital Marketing…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5935181643?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5935270588?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Email Marketing Operations Assistant</a></h2>
-        <div class="meta"><span><strong>Decentralized Masters</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 20 Oct</div>
-        <p class="snippet">About Future Finance Future Finance is building the next generation of financial media: a daily newsletter that makes markets, investing, economics, and wealth creation engaging, actionable, and easy to understand for a modern audience. Our goal is simple: become a daily habit f…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5935270588?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/land/ad/5935226000?se=4JjXfdrW8RG74q0YsdnZrA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=5A004C187A1CE24C56434E1ECBE9043299EB5203" target="_blank" rel="noopener">Social Media Coordinator</a></h2>
-        <div class="meta"><span><strong>Dr. Martens</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 20 Oct</div>
-        <p class="snippet">Dr. Martens is more than a brand - it’s a global icon with over 60 years of attitude, heritage, and cultural impact. We’re a thriving, values‑driven business powered by diverse thinkers, bold doers, and people who bring their whole selves to work. If you’re ready to make your ma…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/land/ad/5935226000?se=4JjXfdrW8RG74q0YsdnZrA&amp;utm_medium=api&amp;utm_source=50c0f0cd&amp;v=5A004C187A1CE24C56434E1ECBE9043299EB5203" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Reed</span></div>
-        <h2><a href="https://www.reed.co.uk/jobs/marketing-campaign-executive/57473930" target="_blank" rel="noopener">Marketing Campaign Executive</a></h2>
-        <div class="meta"><span><strong>The Portfolio Group</strong></span><span class="sep">·</span><span>London</span><span class="sep">·</span><span class="mono">£32,000–£38,000</span></div>
-        <div class="closing ok">Posted 19 Oct</div>
-        <p class="snippet">Are you an organised, creative marketer who loves bringing events to life? We&#x27;re looking for an ambitious Marketing Campaign Executive to join a market-leading B2B information and events business that supports thousands of organisations across the UK. This is an exciting opportu…</p>
-        <a class="apply" href="https://www.reed.co.uk/jobs/marketing-campaign-executive/57473930" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5934431056?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Marketing and Digital Assistant</a></h2>
-        <div class="meta"><span><strong>Handle Recruitment</strong></span><span class="sep">·</span><span>South West London, London</span></div>
-        <div class="closing ok">Posted 19 Oct</div>
-        <p class="snippet">Full Time in the office is SW London Looking to get your marketing career off to a flying start? We&#x27;re working with a growing events and media business looking for a Marketing &amp; Digital Assistant to join its busy marketing team. This is a great opportunity for someone who wants …</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5934431056?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Adzuna</span></div>
-        <h2><a href="https://www.adzuna.co.uk/jobs/details/5934032852?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">Strategic Account Executive</a></h2>
-        <div class="meta"><span><strong>Pilot Thomas Logistics</strong></span><span class="sep">·</span><span>London, UK</span></div>
-        <div class="closing ok">Posted 19 Oct</div>
-        <p class="snippet">Our world is transforming, and PTC is leading the way. Our software brings the physical and digital worlds together, enabling companies to improve operations, create better products, and empower people in all aspects of their business. Our people make all the difference in our s…</p>
-        <a class="apply" href="https://www.adzuna.co.uk/jobs/details/5934032852?utm_medium=api&amp;utm_source=50c0f0cd" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Jibe</span></div>
+      <article class="listing" data-cats="Programmatic / ad ops">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://careers.publicisgroupe.com/jobs/177357?lang=en-us" target="_blank" rel="noopener">Associate Programmatic Trader</a></h2>
         <div class="meta"><span><strong>Publicis Groupe - Epsilon</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 12 Oct</div>
+        <div class="closing ok">Posted 12 Oct · <span class="tag">Programmatic / ad ops</span></div>
         <p class="snippet">Experience level: Entry. Company Description See how Epsilon powers connected marketing by unlocking the full potential of data and identity. Overview How You’ll Make an Impact We&#x27;re looking for an ambitious graduate eager to build a successful…</p>
         <a class="apply" href="https://careers.publicisgroupe.com/jobs/177357?lang=en-us" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Workday</span></div>
-        <h2><a href="https://dentsuaegis.wd3.myworkdayjobs.com/en-US/DAN_GLOBAL/job/London/Client-Executive_R1130873" target="_blank" rel="noopener">Client Executive</a></h2>
-        <div class="meta"><span><strong>Dentsu</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 8 Oct</div>
-        
-        <a class="apply" href="https://dentsuaegis.wd3.myworkdayjobs.com/en-US/DAN_GLOBAL/job/London/Client-Executive_R1130873" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Workday</span></div>
-        <h2><a href="https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/London/Publishing-Account-Executive_JR0100353" target="_blank" rel="noopener">Publishing Account Executive</a></h2>
-        <div class="meta"><span><strong>Havas</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 6 Oct</div>
-        
-        <a class="apply" href="https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/London/Publishing-Account-Executive_JR0100353" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Workday</span></div>
+      <article class="listing" data-cats="Client services">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://dentsuaegis.wd3.myworkdayjobs.com/en-US/DAN_GLOBAL/job/London/Account-Executive_R1131060" target="_blank" rel="noopener">Account Executive</a></h2>
         <div class="meta"><span><strong>Dentsu</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 3 Oct</div>
+        <div class="closing ok">Posted 10 Oct · <span class="tag">Client services</span></div>
         
         <a class="apply" href="https://dentsuaegis.wd3.myworkdayjobs.com/en-US/DAN_GLOBAL/job/London/Account-Executive_R1131060" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Workday</span></div>
+      <article class="listing" data-cats="Client services">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
+        <h2><a href="https://dentsuaegis.wd3.myworkdayjobs.com/en-US/DAN_GLOBAL/job/London/Client-Executive_R1130873" target="_blank" rel="noopener">Client Executive</a></h2>
+        <div class="meta"><span><strong>Dentsu</strong></span><span class="sep">·</span><span>London</span></div>
+        <div class="closing ok">Posted 10 Oct · <span class="tag">Client services</span></div>
+        
+        <a class="apply" href="https://dentsuaegis.wd3.myworkdayjobs.com/en-US/DAN_GLOBAL/job/London/Client-Executive_R1130873" target="_blank" rel="noopener">View &amp; apply →</a>
+      </article>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/London/Marketing---Events-Executive_JR0096373-1" target="_blank" rel="noopener">Marketing &amp; Events Executive</a></h2>
         <div class="meta"><span><strong>Havas</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 3 Oct</div>
+        <div class="closing ok">Posted 10 Oct</div>
         
         <a class="apply" href="https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/London/Marketing---Events-Executive_JR0096373-1" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Workday</span></div>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/London/ABM---Tech-Partnerships-Executive_JR0090103-2" target="_blank" rel="noopener">ABM &amp; Tech Partnerships Executive</a></h2>
         <div class="meta"><span><strong>Havas</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 3 Oct</div>
+        <div class="closing ok">Posted 10 Oct</div>
         
         <a class="apply" href="https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/London/ABM---Tech-Partnerships-Executive_JR0090103-2" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Jibe</span></div>
+      <article class="listing" data-cats="Retail media|Client services">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://careers.publicisgroupe.com/jobs/175743?lang=en-us" target="_blank" rel="noopener">Client Development Associate (Retail Media)</a></h2>
         <div class="meta"><span><strong>Publicis Groupe - Epsilon</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 1 Oct</div>
+        <div class="closing ok">Posted 1 Oct · <span class="tag">Retail media</span><span class="tag">Client services</span></div>
         <p class="snippet">Experience level: Intermediate. Company Description See how Epsilon powers connected marketing by unlocking the full potential of data and identity. Overview How You’ll Make an Impact We&#x27;re looking for a Client Development to join our Retail Media tea…</p>
         <a class="apply" href="https://careers.publicisgroupe.com/jobs/175743?lang=en-us" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Teamtailor</span></div>
+      <article class="listing" data-cats="Paid social|Paid search / PPC">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://team.vervaunt.com/jobs/8464967-junior-paid-media-consultant" target="_blank" rel="noopener">Junior Paid Media Consultant</a></h2>
         <div class="meta"><span><strong>Vervaunt</strong></span><span class="sep">·</span><span>London</span></div>
-        <div class="closing ok">Posted 28 Sep</div>
+        <div class="closing ok">Posted 28 Sep · <span class="tag">Paid social</span><span class="tag">Paid search / PPC</span></div>
         <p class="snippet">Love digging into the numbers behind a great campaign? Want to learn paid media inside a team that takes quality seriously? We&#x27;d love to hear from you. About Vervaunt Vervaunt, now part of IDHL, is a London-based eCommerce and paid media consultancy agency, focused on driving gr…</p>
         <a class="apply" href="https://team.vervaunt.com/jobs/8464967-junior-paid-media-consultant" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Greenhouse</span></div>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://job-boards.greenhouse.io/wppmedia/jobs/5417679008" target="_blank" rel="noopener">Campaign Executive</a></h2>
         <div class="meta"><span><strong>WPP Media</strong></span><span class="sep">·</span><span>London, United Kingdom</span></div>
         <div class="closing ok">Posted 9 Sep</div>
         
         <a class="apply" href="https://job-boards.greenhouse.io/wppmedia/jobs/5417679008" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Greenhouse</span></div>
-        <h2><a href="https://job-boards.greenhouse.io/wppmedia/jobs/5378982008" target="_blank" rel="noopener">Associate, Digital Operations - OOH</a></h2>
-        <div class="meta"><span><strong>WPP Media</strong></span><span class="sep">·</span><span>London, United Kingdom</span></div>
-        <div class="closing ok">Posted 14 Aug</div>
-        
-        <a class="apply" href="https://job-boards.greenhouse.io/wppmedia/jobs/5378982008" target="_blank" rel="noopener">View &amp; apply →</a>
-      </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Greenhouse</span></div>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://job-boards.greenhouse.io/wppmedia/jobs/5189194008" target="_blank" rel="noopener">Associate, Social</a></h2>
         <div class="meta"><span><strong>WPP Media</strong></span><span class="sep">·</span><span>London, United Kingdom</span></div>
         <div class="closing ok">Posted 14 May</div>
@@ -1079,16 +476,16 @@
     <p class="region-note">Everywhere else. Newest first.</p>
 
     <div class="listings">
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Workday</span></div>
+      <article class="listing" data-cats="Paid search / PPC">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/Leeds/Biddable-Executive_JR0101182-2" target="_blank" rel="noopener">Biddable Executive</a></h2>
         <div class="meta"><span><strong>Havas</strong></span><span class="sep">·</span><span>Leeds</span></div>
-        <div class="closing ok">Posted 29 Oct</div>
+        <div class="closing ok">Posted 29 Oct · <span class="tag">Paid search / PPC</span></div>
         
         <a class="apply" href="https://wd3.myworkdaysite.com/recruiting/havas/GroupExternalCareerSite/job/Leeds/Biddable-Executive_JR0101182-2" target="_blank" rel="noopener">View &amp; apply →</a>
       </article>
-      <article class="listing">
-        <div class="listing-top"><div class="chips"><span class="chip new">New this week</span></div><span class="chip source">Teamtailor</span></div>
+      <article class="listing" data-cats="Other">
+        <div class="listing-top"><div class="chips"></div><span class="chip source">Careers site</span></div>
         <h2><a href="https://themissiongroup-speed.teamtailor.com/jobs/8541076-pr-executive-business-corporate" target="_blank" rel="noopener">PR Executive (Business &amp; Corporate)</a></h2>
         <div class="meta"><span><strong>krow group</strong></span><span class="sep">·</span><span>Bristol</span></div>
         <div class="closing ok">Posted 13 Oct</div>
@@ -1101,7 +498,22 @@
   
 
   <footer>
-    <span>Sources: employer careers pages · Reed · Adzuna · WYK team picks. Paid "trainee" course adverts excluded.</span>
+    <span>Sources: employer careers pages · Reed · Adzuna. Checked automatically; paid "trainee" course adverts excluded.</span>
     <span class="mono">Checked automatically each week</span>
   </footer>
 </div>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.filters .f'), cards=document.querySelectorAll('.listing');
+  function apply(f){
+    btns.forEach(function(b){b.classList.toggle('on', b.dataset.f===f);});
+    cards.forEach(function(c){ var cats=(c.dataset.cats||'').split('|'); c.hidden = f && cats.indexOf(f)<0; });
+    document.querySelectorAll('.region').forEach(function(r){
+      var n=r.querySelectorAll('.listing:not([hidden])').length; r.querySelector('.count').textContent=n+' roles'; r.hidden = n===0;
+    });
+    try { history.replaceState(null,'', f ? '#'+encodeURIComponent(f) : location.pathname); } catch(e){}
+  }
+  btns.forEach(function(b){ b.addEventListener('click', function(){ apply(b.dataset.f); }); });
+  var h=decodeURIComponent(location.hash.slice(1)); if(h) apply(h);
+})();
+</script>
