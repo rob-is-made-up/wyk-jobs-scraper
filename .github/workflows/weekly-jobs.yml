@@ -2,7 +2,7 @@ name: Weekly jobs run
 
 on:
   schedule:
-    - cron: "30 6 * * 1"      # every Monday 06:30 UTC (07:30 UK in summer, 06:30 in winter)
+    - cron: "30 6 * * 0"      # every Sunday 06:30 UTC. GitHub starts it about 10 hours late, so results land Sunday afternoon, ready for the Monday 08:10 publish
   workflow_dispatch:           # also lets anyone with repo access run it by hand
 
 permissions:
